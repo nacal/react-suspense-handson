@@ -12,6 +12,11 @@ export const SometimesSuspend: React.VFC = () => {
   return <p>Hello, world!</p>;
 };
 
+async function fetchData1(): Promise<string> {
+  await sleep(1000);
+  return `Hello, ${(Math.random() * 1000).toFixed(0)}`;
+}
+
 function App() {
   const [count, setCount] = useState(0);
   return (
